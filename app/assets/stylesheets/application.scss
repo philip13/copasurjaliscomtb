@@ -16,3 +16,46 @@
 @import "refinery/formatting";
 @import "refinery/theme";
 @import "bootstrap";
+
+
+.home-top-container{
+  background-image: image-url('volcan-y-ciudad-guzman.jpg');
+  background-size: 100% auto;
+  min-height: 40vw;
+}
+
+.copa-sur-logo{
+  background-image: image-url('copasur.png');
+  background-size: 45% auto;
+  background-position: center;
+  background-repeat: no-repeat; 
+  margin: 10px 0px;
+  height: 250px;
+}
+
+
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.color-red{
+  color: #f0252b;
+}
+
+a.color-white{
+  color: white;
+  &:hover{
+    color: #f0252b;
+    text-decoration: none;
+    text-shadow: 2px 2px blue;
+  }
+}
