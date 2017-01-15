@@ -1,11 +1,24 @@
+<% @events = Refinery::Events::Event.all %>
 <div class="home-top-container">
   <div class="container">
-    <div class="row">
-      <div class="col-sm-12 copa-sur-logo"></div>
-      </div>
-      <div class="col-sm-12">
-        <h1 class="text-center"><a href="/" class="color-white">Racking Copa Sur Jalisco MTB 2016</h1>
-      </div>
+    <div class="row head-home">
+      <div class="col-sm-6 copa-sur-logo"></div>
+       <div class="col-sm-6 head-calendar">
+          <%= raw @page.content_for(:head_calendar) %>
+        </div> 
+    </div>
+    <div class="row events">
+      <% @events.each do |event|%>
+        <div class="col-sm-3">
+          <ul class="event">
+            <li class="title"><%= event.title.upcase%></li>
+            <li class="date"><%= event.date.strftime("%B %d") %></li>
+          </ul>
+        </div>
+      <%end%>
+    </div>
+    <div class="row text-center">
+      <%= raw@page.content_for(:calendar_notes) %>
     </div>
   </div>
 </div>
