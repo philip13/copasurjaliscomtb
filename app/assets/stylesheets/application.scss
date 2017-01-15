@@ -22,17 +22,39 @@
   background-image: image-url('volcan-y-ciudad-guzman.jpg');
   background-size: 100% auto;
   min-height: 40vw;
+  background-repeat: no-repeat;
+  background-color: #0384b0; 
+  color: white;
 }
 
+.head-home{
+  padding: 0px;
+}
 .copa-sur-logo{
   background-image: image-url('copasur.png');
-  background-size: 45% auto;
+  background-size: 60% auto;
   background-position: center;
   background-repeat: no-repeat; 
-  margin: 10px 0px;
   height: 250px;
 }
+.head-calendar{
+  margin-top: 70px;
+  padding: 15px;
+  background-color: transparentize( black, 0.75);
+  h1, h2, h3{
+    text-align: center;
+  }
+}
 
+ul.event{
+  padding: 15px 0px;
+  li{ 
+    list-style-type: none;
+    text-align: center;
+  }
+  .title{ font-weight: 500;}
+  .date{}
+}
 
 
 .text-left {
