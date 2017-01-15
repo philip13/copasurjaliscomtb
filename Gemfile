@@ -68,3 +68,5 @@ gem 'refinerycms-authentication-devise', '~> 1.0'
 #  gem 'refinerycms-page-images', ['~> 3.0', '>= 3.0.0']
 
 gem 'refinerycms-events', path: 'vendor/extensions'
+gem 'refinerycms-i18n'
+gem 'refinerycms-services', path: 'vendor/extensions'

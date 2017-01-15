@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170114214222) do
+ActiveRecord::Schema.define(version: 20170115021818) do
 
   create_table "refinery_authentication_devise_roles", force: :cascade do |t|
     t.string "title"
@@ -172,6 +172,27 @@ ActiveRecord::Schema.define(version: 20170114214222) do
     t.integer  "file_size"
     t.string   "file_uid"
     t.string   "file_ext"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "refinery_service_translations", force: :cascade do |t|
+    t.integer  "refinery_service_id", null: false
+    t.string   "locale",              null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "title"
+    t.text     "description"
+  end
+
+  add_index "refinery_service_translations", ["locale"], name: "index_refinery_service_translations_on_locale"
+  add_index "refinery_service_translations", ["refinery_service_id"], name: "index_refinery_service_translations_on_refinery_service_id"
+
+  create_table "refinery_services", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "icon_id"
+    t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
