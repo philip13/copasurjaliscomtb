@@ -81,3 +81,25 @@ a.color-white{
     text-shadow: 2px 2px blue;
   }
 }
+
+.container-events{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.content-event{
+  padding: 5px;
+  width: 200px;
+  color: white;
+  text-align: center;
+}

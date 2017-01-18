@@ -7,9 +7,9 @@
           <%= raw @page.content_for(:head_calendar) %>
         </div> 
     </div>
-    <div class="row events">
+     <div class="container-events">
       <% @events.each do |event|%>
-        <div class="col-sm-3">
+        <div class="content-event">
           <ul class="event">
             <li class="title"><%= event.title.upcase%></li>
             <li class="date"><%= l(event.date, format: "%B %d").to_s.upcase %></li>
