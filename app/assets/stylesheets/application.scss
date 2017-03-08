@@ -20,11 +20,38 @@
 
 .home-top-container{
   background-image: image-url('volcan-y-ciudad-guzman.jpg');
-  background-size: 100% auto;
+  background-size: cover;
   min-height: 40vw;
   background-repeat: no-repeat;
   background-color: #0384b0; 
   color: white;
+
+}
+.resultados-2017{
+  background-image: image-url('cover-resultados.jpg');
+  background-size: cover;
+  min-height: 50vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ccc; 
+  a, h1, h2, h3{
+    color: white;
+  }
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .row{
+    padding: 15px;
+    background-color: transparentize( black, 0.45);
+  }
 }
 
 .head-home{
@@ -43,6 +70,9 @@
   background-color: transparentize( black, 0.75);
   h1, h2, h3{
     text-align: center;
+  }
+  @media (max-width: 767px ){
+    margin-top: -15px;
   }
 }
 
