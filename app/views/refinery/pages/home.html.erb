@@ -2,8 +2,8 @@
 <div class="home-top-container">
   <div class="container">
     <div class="row head-home">
-      <div class="col-sm-6 copa-sur-logo"></div>
-       <div class="col-sm-6 head-calendar">
+      <div class="col-md-6 copa-sur-logo"></div>
+       <div class="col-md-6 head-calendar">
           <%= raw @page.content_for(:head_calendar) %>
         </div> 
     </div>
@@ -12,7 +12,10 @@
         <div class="content-event">
           <ul class="event">
             <li class="title"><%= event.title.upcase%></li>
-            <li class="date"><%= l(event.date, format: "%B %d").to_s.upcase %></li>
+            <li class="date">
+              <%#= l(event.date, format: "%B %d").to_s.upcase %>
+              <%= "#{get_month_to_es_by_num( event.date.month).upcase}  #{event.date.day}" %>
+            </li>
           </ul>
         </div>
       <%end%>
