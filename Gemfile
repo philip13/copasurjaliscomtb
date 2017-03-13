@@ -12,11 +12,12 @@ group :production do
   gem 'pg'
 end
 
+gem 'bootstrap-sass', '~> 3.3.6'
+
 # Use Bootstrap with Sass
-gem 'bootstrap', '~> 4.0.0.alpha3.1'
-source 'https://rails-assets.org' do
-  gem 'rails-assets-tether', '>= 1.1.0'
-end
+# source 'https://rails-assets.org' do
+  #gem 'rails-assets-tether', '>= 1.1.0'
+# end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
