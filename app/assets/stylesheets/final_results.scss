@@ -1,0 +1,12 @@
+.resultados-2016{
+  background-image: image-url('campeon_copa_sur_2016-2.jpg');
+  background-size: cover;
+  background-position: center bottom;
+  min-height: 100vh;
+  .container{
+    color: $black;
+    background-color: transparentize( white, 0.5);
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
