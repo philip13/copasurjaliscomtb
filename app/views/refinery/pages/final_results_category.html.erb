@@ -3,7 +3,9 @@
     <div class="row"> 
     </div>
     <div class="col-sm-12">
-      <%= raw @page.content_for(:final_results) %>
+      <div class="table-responsive">
+        <%= raw @page.content_for(:final_results) %>
+      </div>
     </div>
   </div>
 </div>
