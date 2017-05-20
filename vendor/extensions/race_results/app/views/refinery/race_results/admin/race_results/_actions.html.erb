@@ -1,0 +1,20 @@
+<ul>
+  <% if ::Refinery::RaceResults::Admin::RaceResultsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.race_results_admin_race_results_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= action_label :add, refinery.new_race_results_admin_race_result_path, t('.create_new') %>
+  </li>
+<% if !searching? && ::Refinery::RaceResults::Admin::RaceResultsController.sortable? && ::Refinery::RaceResults::RaceResult.many? %>
+  <li>
+    <%= action_label :reorder,
+                     refinery.race_results_admin_race_results_path,
+                     t('.reorder', what:  "Race Results"), id: 'reorder_action'%>
+    <%= action_label :reorder_done,
+                     refinery.race_results_admin_race_results_path,
+                      t('.reorder_done', what: "Race Results"), id: 'reorder_action_done', class: 'hidden'%>
+  </li>
+<% end %>
+</ul>

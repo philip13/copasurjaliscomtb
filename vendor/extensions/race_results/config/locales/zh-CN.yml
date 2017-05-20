@@ -1,0 +1,33 @@
+zh-CN:
+  refinery:
+    plugins:
+      race_results:
+        title: Race Results
+    race_results:
+      admin:
+        race_results:
+          actions:
+            create_new: 建立新的 Race Result
+            reorder: 对 Race Results 重新排序
+            reorder_done: 对 Race Results 的重新排序结束
+          records:
+            title: Race Results
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Race Results yet. Click "Add New Race Result" to add your first race result.
+            no_items_yet: 目前没有 Race Results . 点击 "Add New Race Result" 创建一个race result.
+          race_result:
+            view_live_html: 查看 race result 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 race result
+            delete: 永久删除 race result
+      race_results:
+        show:
+          other: 其他 Race Results
+  activerecord:
+    attributes:
+      'refinery/race_results/race_result':
+        rider_id: Rider
+        event_id: Event
+        category_id: Category
+        rider_number: Rider Number
+        number_place: Number Place

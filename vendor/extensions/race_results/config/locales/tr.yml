@@ -1,0 +1,31 @@
+tr:
+  refinery:
+    plugins:
+      race_results:
+        title: Race Results
+    race_results:
+      admin:
+        race_results:
+          actions:
+            create_new: Yeni Ekle Race Result
+            reorder: Tekrar sirala Race Results
+            reorder_done: Tekrar siralama tamamlandiRace Results
+          records:
+            title: Race Results
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Race Results yok henuz.  Tikla "Yeni Ekle Race Result" eklemek senin ilk race result.
+          race_result:
+            view_live_html: Bunu canlu race result goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle race result
+            delete: Bunu Sil race result sonsuza dek
+      race_results:
+        show:
+          other: Diger Race Results
+  activerecord:
+    attributes:
+      'refinery/race_results/race_result':
+        rider_id: Rider
+        event_id: Event
+        category_id: Category
+        rider_number: Rider Number
+        number_place: Number Place

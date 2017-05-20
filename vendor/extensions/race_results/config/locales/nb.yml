@@ -1,0 +1,31 @@
+nb:
+  refinery:
+    plugins:
+      race_results:
+        title: Race Results
+    race_results:
+      admin:
+        race_results:
+          actions:
+            create_new: Lag en ny Race Result
+            reorder: Endre rekkefølgen på Race Results
+            reorder_done: Ferdig å endre rekkefølgen Race Results
+          records:
+            title: Race Results
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Race Results enda. Klikk på "Lag en ny Race Result" for å legge til din første race result.
+          race_result:
+            view_live_html: Vis hvordan denne race result ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne race result
+            delete: Fjern denne race result permanent
+      race_results:
+        show:
+          other: Andre Race Results
+  activerecord:
+    attributes:
+      'refinery/race_results/race_result':
+        rider_id: Rider
+        event_id: Event
+        category_id: Category
+        rider_number: Rider Number
+        number_place: Number Place

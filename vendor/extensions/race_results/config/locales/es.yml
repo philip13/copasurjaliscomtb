@@ -1,0 +1,32 @@
+es:
+  refinery:
+    plugins:
+      race_results:
+        title: Race Results
+#        article: masculino/femenino
+    race_results:
+      admin:
+        race_results:
+          actions:
+            create_new: Crear nuevo race result
+            reorder: Reordenar race results
+            reorder_done: Reordenación de race results completada
+          records:
+            title: Race Results
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay race results todavía. Pulsa en "Crear nuevo Race Result" para crear tu primer race result.
+          race_result:
+            view_live_html: Ver este race result como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este race result
+            delete: Borrar este race result para siempre
+      race_results:
+        show:
+          other: Otros race results
+  activerecord:
+    attributes:
+      'refinery/race_results/race_result':
+        rider_id: Rider
+        event_id: Event
+        category_id: Category
+        rider_number: Rider Number
+        number_place: Number Place

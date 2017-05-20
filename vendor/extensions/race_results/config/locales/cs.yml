@@ -1,0 +1,31 @@
+cs:
+  refinery:
+    plugins:
+      race_results:
+        title: Race Results
+    race_results:
+      admin:
+        race_results:
+          actions:
+            create_new: Přidat Race Result
+            reorder: Řadit Race Results
+            reorder_done: Konec řazení Race Results
+          records:
+            title: Race Results
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Race Results. Zvolte "Přidat Race Result" pro přidání prvního race result.
+          race_result:
+            view_live_html: Zobrazit náhled race result<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit race result
+            delete: Smazat race result
+      race_results:
+        show:
+          other: Další Race Results
+  activerecord:
+    attributes:
+      'refinery/race_results/race_result':
+        rider_id: Rider
+        event_id: Event
+        category_id: Category
+        rider_number: Rider Number
+        number_place: Number Place

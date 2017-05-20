@@ -1,0 +1,31 @@
+nl:
+  refinery:
+    plugins:
+      race_results:
+        title: Race Results
+    race_results:
+      admin:
+        race_results:
+          actions:
+            create_new: Nieuwe Race Result toevoegen
+            reorder: De volgorde van de Race Results wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Race Result-volgorde
+          records:
+            title: Race Results
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Race Results. Druk op 'Nieuwe Race Result toevoegen' om de eerste toe te voegen.
+          race_result:
+            view_live_html: Deze race result op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze race result
+            delete: Deze race result definitief verwijderen
+      race_results:
+        show:
+          other: Andere Race Results
+  activerecord:
+    attributes:
+      'refinery/race_results/race_result':
+        rider_id: Rider
+        event_id: Event
+        category_id: Category
+        rider_number: Rider Number
+        number_place: Number Place
