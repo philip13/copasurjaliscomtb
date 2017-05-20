@@ -1,0 +1,45 @@
+<% content_for :body_content_title do %>
+  <%= @category.name %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Name</h1>
+    <p>
+      <%=raw @category.name %>
+    </p>
+  </section>
+  <section>
+    <h1>Years Range</h1>
+    <p>
+      <%=raw @category.years_range %>
+    </p>
+  </section>
+  <section>
+    <h1>Laps</h1>
+    <p>
+      <%=raw @category.laps %>
+    </p>
+  </section>
+  <section>
+    <h1>Win Prizes</h1>
+    <p>
+      <%=raw @category.win_prizes %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="categories">
+      <% @categories.each do |category| %>
+        <li>
+          <%= link_to category.name, refinery.categories_category_path(category) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>
