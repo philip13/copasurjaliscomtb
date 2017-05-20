@@ -1,0 +1,42 @@
+<%= form_for [refinery, :categories_admin, @category] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @category,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :name -%>
+    <%= f.text_field :name, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :years_range -%>
+    <%= f.text_field :years_range -%>
+  </div>
+
+<div class='field'>
+    <%= f.label :group_name -%>
+    <%= f.select :group_name, options_for_select([ ['Primer Grupo', 'Primer Grupo'], ['Segundo Grupo', 'Segundo Grupo'], ['Infantiles', 'Infantiles']], @category.group_name  )   %>
+  </div>
+
+
+  <div class='field'>
+    <%= f.label :category_id, "Category Id " -%>
+    <%= f.text_field :category_id -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :laps -%>
+    <%= f.number_field :laps -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :win_prizes -%>
+    <%= f.text_field :win_prizes -%>
+  </div>
+
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.categories.admin.categories.category'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @category.name) -%>
+<% end -%>
