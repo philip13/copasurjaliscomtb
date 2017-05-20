@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170115021818) do
+ActiveRecord::Schema.define(version: 20170520002246) do
 
   create_table "refinery_authentication_devise_roles", force: :cascade do |t|
     t.string "title"
@@ -54,6 +54,18 @@ ActiveRecord::Schema.define(version: 20170115021818) do
 
   add_index "refinery_authentication_devise_users", ["id"], name: "index_refinery_authentication_devise_users_on_id"
   add_index "refinery_authentication_devise_users", ["slug"], name: "index_refinery_authentication_devise_users_on_slug"
+
+  create_table "refinery_categories", force: :cascade do |t|
+    t.string   "name"
+    t.string   "years_range"
+    t.integer  "laps"
+    t.string   "win_prizes"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "category_id"
+    t.string   "group_name"
+  end
 
   create_table "refinery_events", force: :cascade do |t|
     t.string   "title"
@@ -155,6 +167,17 @@ ActiveRecord::Schema.define(version: 20170115021818) do
   add_index "refinery_pages", ["parent_id"], name: "index_refinery_pages_on_parent_id"
   add_index "refinery_pages", ["rgt"], name: "index_refinery_pages_on_rgt"
 
+  create_table "refinery_race_results", force: :cascade do |t|
+    t.integer  "rider_id"
+    t.integer  "event_id"
+    t.integer  "category_id"
+    t.integer  "rider_number"
+    t.integer  "number_place"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "refinery_resource_translations", force: :cascade do |t|
     t.integer  "refinery_resource_id", null: false
     t.string   "locale",               null: false
@@ -172,6 +195,23 @@ ActiveRecord::Schema.define(version: 20170115021818) do
     t.integer  "file_size"
     t.string   "file_uid"
     t.string   "file_ext"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "refinery_riders", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "mother_surname"
+    t.date     "birdth_date"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "phone_number"
+    t.string   "blood_type"
+    t.integer  "rider_number"
+    t.integer  "photo_id"
+    t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

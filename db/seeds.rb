@@ -14,3 +14,12 @@ Refinery::Events::Engine.load_seed
 
 # Added by Refinery CMS Services extension
 Refinery::Services::Engine.load_seed
+
+# Added by Refinery CMS Riders extension
+Refinery::Riders::Engine.load_seed
+
+# Added by Refinery CMS RaceResults extension
+Refinery::RaceResults::Engine.load_seed
+
+# Added by Refinery CMS Categories extension
+Refinery::Categories::Engine.load_seed
