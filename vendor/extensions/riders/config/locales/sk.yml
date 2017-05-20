@@ -1,0 +1,37 @@
+sk:
+  refinery:
+    plugins:
+      riders:
+        title: Riders
+    riders:
+      admin:
+        riders:
+          actions:
+            create_new: Pridať Rider
+            reorder: Preusporiadať Riders
+            reorder_done: Koniec radenia Riders
+          records:
+            title: Riders
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Riders. Kliknite na "Pridať Rider" pre pridanie prvého rider.
+          rider:
+            view_live_html: Zobraziť náhľad rider<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť rider
+            delete: Zmazať rider
+      riders:
+        show:
+          other: Daľšie Riders
+  activerecord:
+    attributes:
+      'refinery/riders/rider':
+        first_name: First Name
+        last_name: Last Name
+        mother_surname: Mother Surname
+        birdth_date: Birdth Date
+        address: Address
+        city: City
+        state: State
+        phone_number: Phone Number
+        blood_type: Blood Type
+        rider_number: Rider Number
+        photo: Photo

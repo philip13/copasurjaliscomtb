@@ -1,0 +1,20 @@
+<ul>
+  <% if ::Refinery::Riders::Admin::RidersController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.riders_admin_riders_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= action_label :add, refinery.new_riders_admin_rider_path, t('.create_new') %>
+  </li>
+<% if !searching? && ::Refinery::Riders::Admin::RidersController.sortable? && ::Refinery::Riders::Rider.many? %>
+  <li>
+    <%= action_label :reorder,
+                     refinery.riders_admin_riders_path,
+                     t('.reorder', what:  "Riders"), id: 'reorder_action'%>
+    <%= action_label :reorder_done,
+                     refinery.riders_admin_riders_path,
+                      t('.reorder_done', what: "Riders"), id: 'reorder_action_done', class: 'hidden'%>
+  </li>
+<% end %>
+</ul>

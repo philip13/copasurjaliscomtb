@@ -1,0 +1,39 @@
+zh-CN:
+  refinery:
+    plugins:
+      riders:
+        title: Riders
+    riders:
+      admin:
+        riders:
+          actions:
+            create_new: 建立新的 Rider
+            reorder: 对 Riders 重新排序
+            reorder_done: 对 Riders 的重新排序结束
+          records:
+            title: Riders
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Riders yet. Click "Add New Rider" to add your first rider.
+            no_items_yet: 目前没有 Riders . 点击 "Add New Rider" 创建一个rider.
+          rider:
+            view_live_html: 查看 rider 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 rider
+            delete: 永久删除 rider
+      riders:
+        show:
+          other: 其他 Riders
+  activerecord:
+    attributes:
+      'refinery/riders/rider':
+        first_name: First Name
+        last_name: Last Name
+        mother_surname: Mother Surname
+        birdth_date: Birdth Date
+        address: Address
+        city: City
+        state: State
+        phone_number: Phone Number
+        blood_type: Blood Type
+        rider_number: Rider Number
+        photo: Photo

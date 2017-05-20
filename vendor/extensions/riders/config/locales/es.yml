@@ -1,0 +1,38 @@
+es:
+  refinery:
+    plugins:
+      riders:
+        title: Riders
+#        article: masculino/femenino
+    riders:
+      admin:
+        riders:
+          actions:
+            create_new: Crear nuevo rider
+            reorder: Reordenar riders
+            reorder_done: Reordenación de riders completada
+          records:
+            title: Riders
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay riders todavía. Pulsa en "Crear nuevo Rider" para crear tu primer rider.
+          rider:
+            view_live_html: Ver este rider como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este rider
+            delete: Borrar este rider para siempre
+      riders:
+        show:
+          other: Otros riders
+  activerecord:
+    attributes:
+      'refinery/riders/rider':
+        first_name: First Name
+        last_name: Last Name
+        mother_surname: Mother Surname
+        birdth_date: Birdth Date
+        address: Address
+        city: City
+        state: State
+        phone_number: Phone Number
+        blood_type: Blood Type
+        rider_number: Rider Number
+        photo: Photo

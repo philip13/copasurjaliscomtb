@@ -1,0 +1,37 @@
+en:
+  refinery:
+    plugins:
+      riders:
+        title: Riders
+    riders:
+      admin:
+        riders:
+          actions:
+            create_new: Add New Rider
+            reorder: Reorder Riders
+            reorder_done: Done Reordering Riders
+          records:
+            title: Riders
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Riders yet. Click "Add New Rider" to add your first rider.
+          rider:
+            view_live_html: View this rider live <br/><em>(opens in a new window)</em>
+            edit: Edit this rider
+            delete: Remove this rider forever
+      riders:
+        show:
+          other: Other Riders
+  activerecord:
+    attributes:
+      'refinery/riders/rider':
+        first_name: First Name
+        last_name: Last Name
+        mother_surname: Mother Surname
+        birdth_date: Birdth Date
+        address: Address
+        city: City
+        state: State
+        phone_number: Phone Number
+        blood_type: Blood Type
+        rider_number: Rider Number
+        photo: Photo

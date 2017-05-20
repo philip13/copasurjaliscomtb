@@ -1,0 +1,37 @@
+tr:
+  refinery:
+    plugins:
+      riders:
+        title: Riders
+    riders:
+      admin:
+        riders:
+          actions:
+            create_new: Yeni Ekle Rider
+            reorder: Tekrar sirala Riders
+            reorder_done: Tekrar siralama tamamlandiRiders
+          records:
+            title: Riders
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Riders yok henuz.  Tikla "Yeni Ekle Rider" eklemek senin ilk rider.
+          rider:
+            view_live_html: Bunu canlu rider goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle rider
+            delete: Bunu Sil rider sonsuza dek
+      riders:
+        show:
+          other: Diger Riders
+  activerecord:
+    attributes:
+      'refinery/riders/rider':
+        first_name: First Name
+        last_name: Last Name
+        mother_surname: Mother Surname
+        birdth_date: Birdth Date
+        address: Address
+        city: City
+        state: State
+        phone_number: Phone Number
+        blood_type: Blood Type
+        rider_number: Rider Number
+        photo: Photo

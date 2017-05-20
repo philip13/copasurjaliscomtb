@@ -1,0 +1,87 @@
+<% content_for :body_content_title do %>
+  <%= @rider.first_name %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>First Name</h1>
+    <p>
+      <%=raw @rider.first_name %>
+    </p>
+  </section>
+  <section>
+    <h1>Last Name</h1>
+    <p>
+      <%=raw @rider.last_name %>
+    </p>
+  </section>
+  <section>
+    <h1>Mother Surname</h1>
+    <p>
+      <%=raw @rider.mother_surname %>
+    </p>
+  </section>
+  <section>
+    <h1>Birdth Date</h1>
+    <p>
+      <%=raw @rider.birdth_date %>
+    </p>
+  </section>
+  <section>
+    <h1>Address</h1>
+    <p>
+      <%=raw @rider.address %>
+    </p>
+  </section>
+  <section>
+    <h1>City</h1>
+    <p>
+      <%=raw @rider.city %>
+    </p>
+  </section>
+  <section>
+    <h1>State</h1>
+    <p>
+      <%=raw @rider.state %>
+    </p>
+  </section>
+  <section>
+    <h1>Phone Number</h1>
+    <p>
+      <%=raw @rider.phone_number %>
+    </p>
+  </section>
+  <section>
+    <h1>Blood Type</h1>
+    <p>
+      <%=raw @rider.blood_type %>
+    </p>
+  </section>
+  <section>
+    <h1>Rider Number</h1>
+    <p>
+      <%=raw @rider.rider_number %>
+    </p>
+  </section>
+  <section>
+    <h1>Photo</h1>
+    <p>
+      <%= image_fu @rider.photo, nil %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="riders">
+      <% @riders.each do |rider| %>
+        <li>
+          <%= link_to rider.first_name, refinery.riders_rider_path(rider) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

@@ -1,0 +1,37 @@
+nl:
+  refinery:
+    plugins:
+      riders:
+        title: Riders
+    riders:
+      admin:
+        riders:
+          actions:
+            create_new: Nieuwe Rider toevoegen
+            reorder: De volgorde van de Riders wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Rider-volgorde
+          records:
+            title: Riders
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Riders. Druk op 'Nieuwe Rider toevoegen' om de eerste toe te voegen.
+          rider:
+            view_live_html: Deze rider op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze rider
+            delete: Deze rider definitief verwijderen
+      riders:
+        show:
+          other: Andere Riders
+  activerecord:
+    attributes:
+      'refinery/riders/rider':
+        first_name: First Name
+        last_name: Last Name
+        mother_surname: Mother Surname
+        birdth_date: Birdth Date
+        address: Address
+        city: City
+        state: State
+        phone_number: Phone Number
+        blood_type: Blood Type
+        rider_number: Rider Number
+        photo: Photo
